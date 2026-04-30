@@ -1,25 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <style>
+  /* Use flexbox on the html/body to push the footer down */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
   body {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-wrapper {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
-    background-color: #f4f4f4;
+    flex: 1 0 auto; /* This allows the content to grow and push the footer */
+  }
+
+  footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #eee; /* Light distinction for the footer area */
+    border-top: 1px solid #ddd;
+  }
+
+  .footer-text {
+    font-size: 0.8em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
   }
 </style>
-<h1>môrgondír's Digital Great Hall</h1>
-<p>Welcome.</p>
+</head>
+<body>
 
-<hr>
+  <div class="content-wrapper">
+    <h1>môrgondír's Digital Great Hall</h1>
+    <p>Welcome.</p>
 
-<ul>
-  <li><a href="eq/index.html">EverQuest Character Roster</a></li>
-  <li><a href="#">reserved for future use</a> ( reserved for future use )</li>
-  <li><a href="#">reserved for future use</a> ( reserved for future use )</li>
-</ul>
+    <hr>
 
-<p style="font-size: 0.8em; color: #666;">
-  Môrgondír and Môrgondír's Great Hall and the content herein is the property of Morningstar Media LLC (TX 32066496723). All rights reserved.
-</p>
+    <ul>
+      <li><a href="eq/index.html">EverQuest Character Roster</a></li>
+      <li><a href="#">reserved for future use</a> ( reserved for future use )</li>
+      <li><a href="#">reserved for future use</a> ( reserved for future use )</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p class="footer-text">
+      Môrgondír and Môrgondír's Great Hall and the content herein is the property of Morgenstern Media LLC (TX 32066496723). All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
